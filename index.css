@@ -41,10 +41,71 @@ input:focus {
     outline: 2px solid #5A3D7A;
 }
 
-.con1, .con2, .con3, .con4, .con5, .con6 {
+.sign_upcon {
+        grid-column: span 2 / span 2;
+        grid-row: span 5 / span 5;
+        grid-column-start: 2;
+        border: solid black 2px;
+        border-radius: 8px;
+        margin-top: 10px;
+        max-height: 750px;
+        height: 100%;
+        background-color: #fff;
+        padding: 50px 15px 10px 15px;
+}
+
+.sign_upsuccess {
+    grid-column: span 2 / span 2;
+    grid-column-start: 2;
+    border: solid rgba(0, 0, 0, 0.486) 1px;
+    border-radius: 8px;
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 5%;
+    align-items: center;
+    text-align: center;
+}
+.idklmao {
+    font-family: "Poppins", "Sans-serif";
+    padding-top: 28px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    color: #4B3B82;
+    font-weight: 600;
+}
+
+.idklmao:hover {
+    color: #ff34c2;
+    transition: color 0.3s ease;
+}
+
+.about {
+    grid-column: span 2 / span 2;
+    grid-row: span 5 / span 5;
+    grid-column-start: 2;
+    border: solid rgba(0, 0, 0, 0.623) 2px;
+    background-color: #ffffffc7;
+    margin-top: 20px;
+    border-radius: 8px;
+    max-height: 350px;
+    height: 100%;
+    text-align: center;
+    color: #00577b;
+    font-size: x-large;
+    padding-top: 25px;
+    align-items: center;
+    overflow: hidden;
+}
+#line {
+    position: relative;
+    bottom: -25px;
+}
+
+.con{
     border: 2px solid rgba(49, 0, 105, 0.062);
     background: rgba(255, 255, 255, 0.3);
-    height: 350px;
+    height: 450px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -52,7 +113,7 @@ input:focus {
     border-radius: 8px;
     transition: transform 0.3s;
 }
-.con1:hover, .con2:hover, .con3:hover, .con4:hover, .con5:hover, .con6:hover {
+.con:hover {
     transform: translateY(-5px);
 }
 
@@ -123,6 +184,7 @@ input:focus {
     align-items:center ;
     justify-content: center;
     padding: 15px;
+    grid-row: span 5 / span 5;
 }
 .i2 {
     grid-column: span 2;
@@ -130,6 +192,7 @@ input:focus {
     flex-direction: column;
     justify-content: center;
     padding: 15px;
+    grid-row: span 5 / span 5;
 }
 #ltxt {
     text-align: center;
@@ -144,6 +207,8 @@ input:focus {
     padding-top: 50px;
 }
 .login_form {
+    max-height: 650px;
+    height: 100%;
     margin-top: 10px;
     display: flex;
     width: 100%;
