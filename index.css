@@ -1,4 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@keyframes color-change-2x {
+  0% {
+    background: #B4A7D6;
+  }
+  100% {
+    background: #e7a7d6;
+  }
+}
+@keyframes color-change-2x {
+  0% {
+    background: #B4A7D6;
+  }
+  100% {
+    background: #e7a7d6;
+  }
+}
+@keyframes waduh {
+    0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
 
 * {
     box-sizing: border-box;
@@ -8,15 +32,77 @@
 }
 
 header {
-    background: #D8BFD8;
+	animation: color-change-2x 2s linear infinite alternate both;
+	animation: color-change-2x 2s linear infinite alternate both;
     position: sticky;
-    color: #5A3D7A;
+    color: #ffffff;
     padding: 1rem;
     text-align: center;
     top: 0;
     z-index: 100;
 }
 
+.branchidk {
+    position:absolute;
+    max-width: 100px;
+    max-height: 72px;
+    left: 96%;
+    top: -50px;
+}
+#branchidk-pos {
+    position: relative;
+}
+#buyButton:hover {
+    transform: translateY(-5px);
+    transform: scale(1.05);
+    background-color: #eeb4ff;
+    color: #fff;
+}
+#buyButton {
+    display: block;
+    background-color: #ffffff;
+    height: 80px;
+    width: 170px;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    justify-items: center;
+    overflow: hidden;
+    left: 60%;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: transform 0.3s;
+}
+#bag {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    bottom: -10px;
+    right: 100%;
+}
+#buyChild {
+    position: relative;
+    top: -50%
+}
+
+#buyText {
+    text-align: center;
+    position: relative;
+    left: 16%;
+    bottom: 25%;
+    color: #000000;
+}
+.eltrumpet {
+    position: absolute;
+    max-width: 100px;
+    max-height: 75px;
+    top: -5px;
+}
+#eltrumpet-pos {
+    position: relative;
+    left: -50%;   
+}
 nav a {
     color: #5A3D7A;
     text-decoration: none;
@@ -31,10 +117,12 @@ nav a:hover {
 .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(5, auto);
     gap: 8px;
     min-height: 100vh;
-    background: linear-gradient(140deg, rgba(180, 167, 214, 1) 0%, rgba(255, 247, 208, 1) 100%);
+    background: linear-gradient(140deg, rgba(180, 167, 214, 1), rgba(255, 247, 208, 1), rgba(200, 180, 240, 1), rgba(255, 222, 208, 1));
+    background-size: 300% 300%;
+    animation: waduh 8s ease-in-out infinite alternate both;
 }
 
 input:focus {
@@ -47,11 +135,32 @@ input:focus {
         grid-column-start: 2;
         border: solid black 2px;
         border-radius: 8px;
-        margin-top: 10px;
+        margin-top: 25px;
         max-height: 750px;
         height: 100%;
         background-color: #fff;
         padding: 50px 15px 10px 15px;
+        width: 450px;
+        justify-self: center;
+}
+
+.order {
+        grid-column: span 2 / span 2;
+        grid-row: span 5 / span 5;
+        grid-column-start: 2;
+        border: solid black 2px;
+        border-radius: 8px;
+        margin-top: 25px;
+        max-height: 650px;
+        height: 100%;
+        background-color: #fff;
+        padding: 50px 15px 10px 15px;
+        width: 480px;
+        justify-self: center;
+}
+
+#visatxt, #ewtxt, #codtxt {
+    font-weight: bold;
 }
 
 .sign_upsuccess {
@@ -80,6 +189,11 @@ input:focus {
     transition: color 0.3s ease;
 }
 
+.option:hover {
+    transform: translateY(-5px);
+    transform: scale(1.05);
+}
+
 .about {
     grid-column: span 2 / span 2;
     grid-row: span 5 / span 5;
@@ -105,14 +219,17 @@ input:focus {
 .con{
     border: 2px solid rgba(49, 0, 105, 0.062);
     background: rgba(255, 255, 255, 0.3);
-    height: 450px;
+    height: 500px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     overflow: hidden;
     border-radius: 8px;
     transition: transform 0.3s;
+    background-color: #cc93fa5d;
+    background-blend-mode: multiply;
 }
+
 .con:hover {
     transform: translateY(-5px);
 }
@@ -144,12 +261,14 @@ input:focus {
 .categories {
     margin-top: 10px;
     flex-direction: column;
-    background: #fff;
+    background: #ffffffbe;
     width: 100%;
     max-width: 435px;
     border-radius: 8px;
     padding: 41px 30px;
     padding: 2rem;
+    position: relative;
+    left: 25px;
 }
 
 #cat {
@@ -242,14 +361,20 @@ input:focus {
 .option {
     width: calc(100% / 3 - 12px);
     border: 1px solid black;
-    margin: 34px 10px 34px 0;
+    margin: 34px 8px 34px 0;
     border-radius: 6px;
-    padding: 5% 8% 5% 4%
+    padding: 5% 8% 5% 4%;
+    transition: transform 0.3s;
 }
 
 .unh, .pwh, #tc {
     text-align: center;
     margin-bottom: 10px;
+}
+
+#phone {
+    width: 450px;
+    height: 34px;
 }
 
 #tc {
@@ -264,6 +389,12 @@ input:focus {
     padding: 8px 50px 8px 50px;
     border-radius: 8px;
     background-color: #fff7d0;
+    transition: transform 0.3s;
+}
+#but1:hover{
+    transform: translateY(-5px);
+    transform: scale(1.05);
+    background-color: #eeb4ff;
 }
 
 #lo {

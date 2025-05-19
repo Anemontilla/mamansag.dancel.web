@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Elysian Sign Up</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/css/intlTelInput.css">
+</head>
+<body>
+    <header>
+        <div id="eltrumpet-pos">
+        <img src="elysia-honkai.gif" class="eltrumpet">
+        </div>
+        <h1>Elysia's Boutique</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+        </nav>
+        <div id="branchidk-pos">
+        <img src="yess.gif" class="branchidk">
+        </div>
+    </header>
+    <div class="container">
+        <div class="order">
+            <div class="login_options">
+                <div class="option">
+                    <a href="#" style="text-decoration: none;"><img src="logos/visa.png" style="width: 28px; height: 28px;"><span><div id="visatxt">VISA</div></span></a>
+                </div>
+                <div class="option">
+                    <a href="#" style="text-decoration: none;"><img src="logos/cash-on-delivery.png" style="width: 28px; height: 28px;"><span><div id="codtxt">COD</div></span></a>
+                </div>
+                <div class="option">
+                    <a href="#" style="text-decoration: none;"><img src="logos/e-wallet.png" style="width: 28px; height: 28px;"><span><div id="ewtxt">WALLET</div></span></a>
+                </div>
+            </div>
+            <hr style="margin-bottom: 20px;">
+            <form action="ord_success.html">
+                <label div id="lo">Full Name</label><br>
+            <div class="unh">
+                <input type="text" placeholder="Enter your name" required><br>
+            </div>
+            <label div id="lo">Phone Number</label><br>
+            <div class="unh">
+                <input type="text" placeholder="Enter your phone number" required><br>
+            </div>
+            <label div id="lo">Email</label><br>
+            <div class="unh">
+                <input type="text" placeholder="Enter your email address" required><br>
+            </div>
+            <label div id="lo">Address</label><br>
+            <div class="unh">
+                <input type="text" placeholder="Enter your address" required><br>
+            </div>
+            <label id="lo">Phone Number</label><br>
+            <div class="unh">
+                <input id="phone" type="tel" placeholder="Enter your phone number" required><br>
+            </div>
+            <div class="lobut">
+                <input id="but1" type="submit" value="Place Order" style="font-size: 25px;">
+            </div>
+            
+            </form>
+        </div>
+</div>
+<footer>
+    <p>© 2024 Elysia's Boutique. Not affiliated with HoYoverse.</p>
+</footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/intlTelInput.min.js"></script>
+<script>
+  const input = document.querySelector("#phone");
+  window.intlTelInput(input, {
+    loadUtils: () => import("https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/utils.js"),
+  });
+</script>
+</html>
